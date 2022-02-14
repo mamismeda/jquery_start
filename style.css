@@ -1,0 +1,44 @@
+.btn{
+    display: block;
+    margin: auto;
+}
+.holder{
+    height: 318px;
+}
+.greeny{
+    height: 318px;
+    background-color: rgb(31, 160, 31);
+}
+h1{
+    text-align: center;
+    color:#fff;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: #00a7ee;
+}
+
+label{
+    position: relative;
+    bottom: 55px;
+    padding-left: 10px;
+    transition: all .5s linear;
+    color: #fff;
+}
+ .first:focus~label{
+    bottom: 100px;
+}
+.second:focus~label{
+    bottom: 100px;
+}
+.format{
+    background-color: #00a7ee;
+    padding: 25px;
+    margin: auto;
+}
