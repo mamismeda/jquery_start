@@ -31,6 +31,7 @@ label{
     transition: all .5s linear;
     color: #fff;
 }
+
  .first:focus~label{
     bottom: 100px;
 }
