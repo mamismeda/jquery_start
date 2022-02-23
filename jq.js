@@ -30,3 +30,15 @@ $(function(){
     })
 
 });
+
+let mark = document.querySelector('.mark');
+let model = document.querySelector('.model');
+
+let models = [
+    {
+        id : 1,
+        model : "Ford",
+        
+    }
+]
+
