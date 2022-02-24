@@ -31,14 +31,53 @@ $(function(){
 
 });
 
-let mark = document.querySelector('.mark');
-let model = document.querySelector('.model');
+// let mark = document.querySelector('.mark');
+// let model = document.querySelector('.model');
 
-let models = [
+let Cars = [
     {
         id : 1,
-        model : "Ford",
-        
+        name : "Ford",
+        model : ['F-150', 'Focus', 'Kuga'],
+    },
+    {
+        id : 2,
+        name : 'Toyota',
+        model : ['Camry', 'Corola', 'Vitz'],
+    },
+
+    {
+        id : 3,
+        name : 'Wolkswagen',
+        model : ['Polo', 'Golf', 'Tiguan'],
+
     }
 ]
+
+Cars.forEach(car =>{
+    $('#make').append(`<option value="${car.id}"> ${car.name} </option>`)
+})
+
+$('#make').change(function (e) { 
+    e.preventDefault();
+
+    $('#model').empty();
+
+    let id = $(this).val();
+
+    let Models = Cars.find(el =>{
+        return el.id == id;
+    });
+
+    Models.model.forEach(mod=>{
+        $('#model').append(`<option value="${mod}"> ${mod} </option>`)
+    })
+    
+});
+
+
+
+// $('.f').click(function(){
+//     $('.model').append(`<option></option>`);
+// })
 
